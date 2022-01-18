@@ -1,0 +1,207 @@
+  :root{
+      --ncolor:#cdcfd1;
+      --footercolor:linear-gradient( var(--navtextcolor),var(--ncolor));
+      --navtextcolor:rgb(7, 100, 177);
+      --maxh:500px;
+      --danger:red;
+      --shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+    }
+*{
+  box-sizing: border-box;
+}
+/* carousel-caption */
+.carousel-caption {
+  top: 40px;
+  bottom: auto;
+  left: 10%;
+  width: 250px;
+  text-align: left;
+
+  background-color: #090909;
+  padding: 14px;
+  border-radius: 20px;
+}
+.carousel-caption button{
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+
+}
+.rating img {
+  width: 18px;
+}
+
+
+.flag_image {
+  position: absolute;
+  top:5%;
+  right: 2%;
+  width: 120px;
+
+
+
+}
+/* carousel-caption */
+
+/* card title  */
+
+
+.my_card-title {
+  position: absolute;
+  top: 10%;
+  background: gray;
+  width: 72%;
+  left: -4%;
+  color: white;
+  padding: 5px 0px 10px 50px;
+}
+
+.my_card-title::before {
+  position: absolute;
+  content: '';
+  background-color: #808080;
+  height: 23px;
+  width: 51px;
+  top: 84%;
+  right: 78.2%;
+  transform: rotate(35deg);
+  z-index: -1;
+}
+/* card title  */
+
+
+
+/* navbar  */
+    .navbar-custom {background-color: var(--ncolor); 
+      font-size: 16px; color:var(--navtextcolor);}
+  nav li:hover{color:rgb(207, 206, 206);}
+  nav .navbar-nav li a{color:var(--navtextcolor) !important;}
+  nav .navbar-nav li a:hover{color: rgb(82, 80, 80) !important;}
+  .sub_heading{font-size:20px;word-wrap: break-word;}
+  .para{font-size:16px;color: #000000;}
+  .main_heading{font-size: 30px;word-wrap: break-word;}
+  .banner_para{font-size:18px; word-wrap: break-word;}
+  .dropdown-menu{background-color: #007bff }
+  .dropdown-menu .dropdown-item:hover{background-color: #0096D6; }
+  .selector-for-some-widget {
+    box-sizing: content-box;
+  }
+/* navbar  */
+/* slider css  */
+
+/* slider css */
+
+    /* custom card bg  */
+    .myproduct{
+      transition: all 0.2s ease-in;
+
+    }
+
+    .myproduct:hover{
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+      border-radius: 5px;
+    
+
+    }
+/* loader css */
+#loader {
+  width: 30px;
+  height: 30px;
+  /* animation: spin 1s linear infinite; */
+  } 
+  .center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+        /* end loader css */
+
+
+
+/* Modify brand and text color */
+*{
+  margin:0px;
+  padding:0px;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/*pre loader */
+
+/*preloader*/
+/* ==================================== */
+.blog_text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.blog_heading {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================== */
+
+    .bg-trans{
+    background-color:rgba(237, 253, 146, 0.3);
+    border-radius: 16px;
+  max-width: 50%;
+    border: 0px solid var(--ncolor);
+  }
+
+
+
+/* @media  for mobile screen  */
+@media only screen and (max-width: 480px) {
+  .main_heading{font-size: 20px !important; word-wrap: break-word !important;
+  }
+  .sub_heading{font-size:16px !important; word-wrap: break-word !important;}
+    .para{font-size:14px !important; word-wrap: break-word !important;}
+    .banner_para{font-size:14px  !important; word-wrap: break-word;}
+    .brand_text{font-size:14px  !important; word-wrap: break-word;}
+  }
+  .social-icons .fa{
+    color:white;
+    margin-left: 15px;
+
+  }
+  .social-icons .fa:hover{
+    color: rgb(201, 194, 194) !important;
+  }
+
+
+
+  /* card hover  */
+  .stand_card {
+    text-align:center;
+
+  
+  }
+
+
+    .zoom {
+
+      transition: transform 0.5s; /* Animation */
+ 
+      margin: 0 auto;
+
+    }
+    
+    .zoom:hover {
+      transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
