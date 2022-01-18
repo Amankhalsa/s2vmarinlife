@@ -12,10 +12,10 @@
 * git push -u origin main
    
 <p align="center">
-    Frontend 
+    <h2>Frontend</h2> 
     <a href="https://s2vmarinelife.com/" target="_blank"><img src="https://s2vmarinelife.com/s2vmarinelife.png" width="400"></a></p>
 <p align="center">
-    Admin Panel
+    <h2>Admin Panel</h2>
     <a href="https://s2vmarinelife.com/" target="_blank"><img src="https://s2vmarinelife.com/adminpanel.png" width="400"></a></p>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
