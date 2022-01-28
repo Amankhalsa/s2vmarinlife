@@ -1,3 +1,5 @@
+
+
 @extends('frontend2.home_master')
   
 @section('title')
@@ -10,14 +12,7 @@ S2V Marine Life
 
 <!--  slider end -->
 
-@if(session('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-<strong>{{session('success')}}</strong> 
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-@endif  
+
 <!-- end slider  -->
 
 <!-- main content  -->
@@ -68,7 +63,7 @@ S2V Marine Life
 					</div>
 				</div>
 			</div>
-
+ 
 			<!--BANNER-->
 			<div class="wrap-banner style-twin-default">
 				<div class="banner-item">

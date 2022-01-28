@@ -7,9 +7,10 @@
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{route('dashboard.view')}}">Home</a></li>
-                            <li><a href="{{route('homepage.slider')}}">slider</a></li>
-                            <li><a href="{{route('homepage.contact')}}">Contact</a></li>
+                            <li><a href="{{route('dashboard.view')}}">Manage Home</a></li>
+                            <li><a href="{{route('homepage.slider')}}">Manage slider</a></li>
+                            <li><a href="{{route('homepage.contact')}}">Manage Contact</a></li>
+                            <li><a href="{{route('view.social.links')}}">Add Social links</a></li>
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">
@@ -37,9 +38,9 @@
                             <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./email-inbox.html">Inbox</a></li>
-                            <li><a href="./email-read.html">Read</a></li>
-                            <li><a href="./email-compose.html">Compose</a></li>
+                            <li><a href="{{route('backend.email')}}">Inbox</a></li>
+                            <li><a href="{{route('read.backend.email')}}">Read</a></li>
+                            <li><a href="{{route('composebackend.email')}}">Compose</a></li>
                         </ul>
                     </li>
                     <li>
@@ -47,7 +48,7 @@
                             <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./app-profile.html">Profile</a></li>
+                            <li><a href="{{route('view.profile')}}">Profile</a></li>
                             <li><a href="./app-calender.html">Calender</a></li>
                         </ul>
                     </li>

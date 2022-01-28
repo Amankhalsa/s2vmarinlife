@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,8 @@
     <link href="{{asset('backend/css/style.css')}}" rel="stylesheet">
 
     <link href="{{asset('backend/./plugins/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+ <!-- Toaster CSS -->
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
 </head>
 
@@ -135,19 +137,38 @@
     <script src="{{asset('backend/./plugins/chartist/js/chartist.min.js')}}"></script>
     <script src="{{asset('backend/./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}"></script>
 
-    <script src="{{asset('backend/plugins/common/common.min.js')}}"></script>
-    <script src="{{asset('backend/js/custom.min.js')}}"></script>
-    <script src="{{asset('backend/js/settings.js')}}"></script>
-    <script src="{{asset('backend/js/gleek.js')}}"></script>
-    <script src="{{asset('backend/js/styleSwitcher.js')}}"></script>
+
 
     <script src="{{asset('backend/./js/dashboard/dashboard-1.js')}}"></script>
-<!-- data table 
- -->
-
- <script src="{{asset('backend/./plugins/tables/js/jquery.dataTables.min.js')}}"></script>
+    <!--data table -->
+     <script src="{{asset('backend/./plugins/tables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('backend/./plugins/tables/js/datatable/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{asset('backend/./plugins/tables/js/datatable-init/datatable-basic.min.js')}}"></script>
+
+ <!-- Toaster Javascript cdn -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+ <script>
+ @if(Session::has('message'))
+ var type = "{{ Session::get('alert-type','info') }}"
+ switch(type){
+    case 'info':
+    toastr.info(" {{ Session::get('message') }} ");
+    break;
+
+    case 'success':
+    toastr.success(" {{ Session::get('message') }} ");
+    break;
+
+    case 'warning':
+    toastr.warning(" {{ Session::get('message') }} ");
+    break;
+
+    case 'error':
+    toastr.error(" {{ Session::get('message') }} ");
+    break; 
+ }
+ @endif 
+</script>
 </body>
 
 </html>

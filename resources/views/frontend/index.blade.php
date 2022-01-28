@@ -20,54 +20,84 @@ S2V Marine Life
 @endif  
 <!-- end slider  -->
 
-<div class="container">
-    <div class="py-5">
-<h1 class="text-center text-danger py-5">
+
+<h1 class="text-center text-light py-5   mt-5 alert rounded-pill" style="background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);">
 Best Aquarium Internal Filters For Fresh And Salt Water
 </h1>
+<div class="container">
+    <div class="">
+
 <!-- card start  -->
 <div class="card-deck">
-  <div class="card">
-    <img src="{{asset('frontend/assets/img/place.webp')}}" class="card-img-top img-fluid" alt="...">
-  
-    <h5 class="my_card-title">Convict Mini 12W
-</h5>
-  </div>
-  <div class="card">
-    <img src="{{asset('frontend/assets/img/place.webp')}}" class="card-img-top" alt="...">
-    <!-- <div class="card-body"> -->
-      <h5 class="my_card-title">Jaguar 15W
-</h5>
-    <!-- </div> -->
- 
-  </div>
-  <div class="card">
-    <img src="{{asset('frontend/assets/img/place.webp')}}" class="card-img-top" alt="...">
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pod " url="#" number="2">
+      <div class="hover-offer ehover1"><img class="img-responsive" src="https://www.edreams.es/content/img/OF/WebMasterPages/merch/img/672sized/672x584_Paris-min.jpg" alt="París" />
+        <div class="offer-content">
+          <div class="ribbon orange">Convict Mini 12W</div>
 
-      <h5 class="my_card-title">Oscar Jumbo 40W 
-</h5>
+          <figcaption> 
+          <span class="flights-icon">(</span>
+          <h4>Coming soon</h4>
 
- 
-  </div>
+       
+          
+            <div class="button2">Buy Now</div>
+            
+          <p class="detail"> &#9733;&#9733;&#9733;</p>
+          </figcaption>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pod" url="#" number="2">
+      <div class="hover-offer ehover1"><img class="img-responsive" src="https://www.edreams.es/content/img/OF/WebMasterPages/merch/img/672sized/672x584_Paris-min.jpg" alt="París" />
+        <div class="offer-content">
+          <div class="ribbon orange">Jaguar 15W
+</div>
+          <figcaption> 
+          <span class="flights-icon">(</span>
+          <h4>Coming soon</h4>
+          <p class="detail"> &#9733;&#9733;&#9733;</p>
+            <div class="button2">Buy Now</div>
+          </figcaption>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pod" url="#" number="2">
+      <div class="hover-offer ehover1"><img class="img-responsive" src="https://www.edreams.es/content/img/OF/WebMasterPages/merch/img/672sized/672x584_Paris-min.jpg" alt="París" />
+        <div class="offer-content">
+          <div class="ribbon orange">Oscar Jumbo 40W 
+</div>
+          <figcaption> 
+          <span class="flights-icon">(</span>
+          <h4>Coming soon</h4>
+          <p class="detail"> &#9733;&#9733;&#9733;</p>
+            <div class="button2">Buy Now</div>
+
+          </figcaption>
+        </div>
+      </div>
+    </div>
+  <!-- ================== -->
 </div>
 <!-- card end  -->
     </div>
-
+</div>
 
 <!-- ============================ -->
 <div class="py-5">
     <div>
-        <p class="main_heading text-center py-5">
+        <p class="main_heading text-center my-5 py-5 text-light rounded-pill font-weight-bold" style="background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);">
         EVERYTHING YOU NEED IN A AQUARIUM INTERNAL FILTER.
         </p>
-     
+      
     </div>
     <!-- row start  -->
-
+<div class="container">
   <div class="row row-cols-1 row-cols-md-2">
       <!-- ================== -->
   <div class="col mb-4">
-    <div class="card">
+    <div class="card zoom">
       <img src="{{asset('frontend/assets/img/nyc-skyline.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">QUALITY ASSURED
@@ -82,7 +112,7 @@ Best Aquarium Internal Filters For Fresh And Salt Water
   <!-- ================== -->
     <!-- ================== -->
     <div class="col mb-4">
-    <div class="card">
+    <div class="card zoom">
       <img src="{{asset('frontend/assets/img/nyc-skyline.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">USER FRIENDLY
@@ -97,7 +127,7 @@ Best Aquarium Internal Filters For Fresh And Salt Water
   <!-- ================== -->
       <!-- ================== -->
       <div class="col mb-4">
-    <div class="card">
+    <div class="card zoom">
       <img src="{{asset('frontend/assets/img/nyc-skyline.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">PERFECTION AT TOP
@@ -115,7 +145,7 @@ Best Aquarium Internal Filters For Fresh And Salt Water
   <!-- ================== -->
       <!-- ================== -->
       <div class="col mb-4">
-    <div class="card">
+    <div class="card zoom">
       <img src="{{asset('frontend/assets/img/nyc-skyline.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">SMART DESIGN

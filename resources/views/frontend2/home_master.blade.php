@@ -17,6 +17,10 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('frontend2/assets/css/chosen.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('frontend2/assets/css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('frontend2/assets/css/color-01.css')}}">
+
+	      <!-- Toaster CSS -->
+		  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
 	<!-- open graph  -->
 	@include('frontend.body.opengraph')
 <!-- open graph  -->
@@ -37,6 +41,17 @@
 
 	<!--header-->
     @include('frontend2.body.header')
+	
+	@if(session('success'))
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+<strong>{{session('success')}}</strong> 
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+@endif 
+
+
 
 
 <!-- end header  -->
@@ -75,6 +90,30 @@
 	"body").style.visibility = "visible";
 	}
 	};
+</script>
+ <!-- Toaster Javascript cdn -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+ <script>
+ @if(Session::has('message'))
+ var type = "{{ Session::get('alert-type','info') }}"
+ switch(type){
+    case 'info':
+    toastr.info(" {{ Session::get('message') }} ");
+    break;
+
+    case 'success':
+    toastr.success(" {{ Session::get('message') }} ");
+    break;
+
+    case 'warning':
+    toastr.warning(" {{ Session::get('message') }} ");
+    break;
+
+    case 'error':
+    toastr.error(" {{ Session::get('message') }} ");
+    break; 
+ }
+ @endif 
 </script>
 </body>
 </html>

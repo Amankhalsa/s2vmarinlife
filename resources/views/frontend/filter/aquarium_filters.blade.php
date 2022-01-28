@@ -11,7 +11,10 @@ Aquarium-filters
 
 
 <!-- end slider  -->
-
+<p class="main_heading  py-5 my-5 text-white text-center rounded-pill "
+ style="background-image: linear-gradient( 89.4deg,  rgba(194,0,39,1) 0.8%, rgba(10,35,104,1) 99.4% ); font-family: 'Lobster', cursive;">
+ Top Selling Aquarium internal filters
+</p>
 <div class="container">
     <!-- product  -->
 @include('frontend.product.product1')
@@ -22,7 +25,7 @@ Aquarium-filters
 <!-- ============================ -->
 <div class="py-5">
     <div>
-        <p class="main_heading text-center">
+        <p class="main_heading  py-5 my-5 text-white text-center rounded-pill" style="font-family: 'Lobster', cursive; background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );">
         EVERYTHING YOU NEED IN A AQUARIUM INTERNAL FILTER.
         </p>
      

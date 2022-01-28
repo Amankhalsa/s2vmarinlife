@@ -1,3 +1,8 @@
+@php
+$get_social_links=DB::table('social_links')->get();
+$address=DB::table('contactus')->first();
+@endphp
+
 <div class="wrap-footer-content footer-style-1">
 
 <div class="wrap-function-info">
@@ -52,17 +57,18 @@
                     <div class="item-content">
                         <div class="wrap-contact-detail">
                             <ul>
+                        
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United State USA</p>
+                                    <p class="contact-txt">{{$address->address}}</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+                                    <p class="contact-txt">{{$address->phone}}</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p class="contact-txt">Contact@yourcompany.com</p>
+                                    <p class="contact-txt">{{$address->email}}</p>
                                 </li>											
                             </ul>
                         </div>
@@ -77,7 +83,7 @@
                     <div class="item-content">
                         <div class="wrap-hotline-footer">
                             <span class="desc">Call Us toll Free</span>
-                            <b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+                            <b class="phone-number">{{$address->phone}}</b>
                         </div>
                     </div>
                 </div>
@@ -86,8 +92,9 @@
                     <h3 class="item-header">Sign up for newsletter</h3>
                     <div class="item-content">
                         <div class="wrap-newletter-footer">
-                            <form action="#" class="frm-newletter" id="frm-newletter">
-                                <input type="email" class="input-email" name="email" value="" placeholder="Enter your email address">
+                            <form action="{{route('subscribed.reg')}}" method="POST" class="frm-newletter" id="frm-newletter">
+                                @csrf
+                                <input type="email" class="input-email" name="email"  placeholder="Enter your email address">
                                 <button class="btn-submit">Subscribe</button>
                             </form>
                         </div>
@@ -150,11 +157,25 @@
                     <div class="item-content">
                         <div class="wrap-list-item social-network">
                             <ul>
-                                <li><a href="#" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+        @foreach($get_social_links as $keys => $value)
+        @switch($value)
+        @case($value->name == 'twitter')
+        <li><a href="{{$value->links}}" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        @break
+        @case($value->name == 'facebook')
+        <li><a href="{{$value->links}}" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        @break
+        @case($value->name == 'pinterest')
+        <li><a href="{{$value->links}}" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        @break
+        @case($value->name == 'instagram')
+        <li><a href="{{$value->links}}" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        @break
+        @case($value->name == 'Tumblr')
+        <li><a href="{{$value->links}}" class="link-to-item" title="tumblr"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+        @break
+        @endswitch
+        @endforeach
                             </ul>
                         </div>
                     </div>

@@ -5,6 +5,12 @@ use App\Http\Controllers\home\HomeController;
 use App\Http\Controllers\home\Home2Controller;
 use App\Http\Controllers\admin\HomeSliderController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\ContactController;
+use App\Http\Controllers\admin\SocialLinkController;
+
+
+
+
 
 
 
@@ -23,7 +29,7 @@ use App\Http\Controllers\admin\AdminController;
 //     return view('frontend.index');
 // });
 // ============ 2nd frontend ============
-Route::get('/', [Home2Controller::class,'homepage2_view'])->name('frontend.view');
+Route::get('/old', [Home2Controller::class,'homepage2_view'])->name('frontend.view');
 
 Route::get('about', [Home2Controller::class,'aboutus'])->name('frontend.about');
 
@@ -43,12 +49,12 @@ Route::get('shop/checkout', [Home2Controller::class,'checkout'])->name('frontend
 
 
 
-// Route::get('/', [HomeController::class,'homepage_view'])->name('homepage.view');
+Route::get('/', [HomeController::class,'homepage_view'])->name('homepage.view');
 // aquarium-filters view
 Route::get('/aquarium-filters', [HomeController::class,'filters_psge_view'])->name('filters_psge.view');
 
 //newsletter route 
-Route::post('/subscribed', [HomeController::class,'newsletter_reg'])->name('subscribed.reg');
+Route::post('/subscribed', [AdminController::class,'newsletter_reg'])->name('subscribed.reg');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // return view('dashboard');
@@ -63,6 +69,45 @@ Route::group(['middleware'=>'auth'],function (){
 Route::get('/dashboard/view', [AdminController::class,'dashboard_view'])->name('dashboard.view');
 
 Route::get('/users', [AdminController::class,'Logout'])->name('user.logout');
+
+
+// =====================================================================================================================================
+// =====================================================================================================================================
+//============= view email ===================
+Route::get('/user/emails', [AdminController::class,'backend_email'])->name('backend.email');
+
+//============ compose email from backedn ==================
+Route::get('/compose/email', [AdminController::class,'compose_backend_email'])->name('composebackend.email');
+
+//============= read_backend_email ===================
+Route::get('/read/email', [AdminController::class,'read_backend_email'])->name('read.backend.email');
+
+// ================= View profile ===================
+Route::get('/view/profile', [AdminController::class,'view_profile'])->name('view.profile');
+
+
+
+// =====================================================================================================================================
+// =====================================================================================================================================
+
+//========================= manage Social links ===========================
+Route::get('/view/social-links', [SocialLinkController::class,'view_social_links'])->name('view.social.links');
+
+Route::post('/stored/sociallink', [SocialLinkController::class,'store_social_links'])->name('store.social.link');
+
+// =========================== edit link ================================
+Route::get('/edit/sociallink/{id}', [SocialLinkController::class,'edit_social_link'])->name('edit.social.link');
+
+//=============== update social links ==================
+Route::post('/update/sociallink/{id}', [SocialLinkController::class,'update_social_link'])->name('update.social.link');
+
+// ================ Delete links ===================
+
+Route::get('/delete/sociallink/{id}', [SocialLinkController::class,'delete_social_link'])->name('delete.social.link');
+
+
+// =====================================================================================================================================
+// =====================================================================================================================================
 
 // ================ manage home page  slider ================
 
@@ -82,11 +127,29 @@ Route::post('/update/slider/{id}', [HomeSliderController::class,'update_home_sli
 
 // ================== delete home slider =======================
 Route::get('/delete/slider/{id}', [HomeSliderController::class,'delete_slider'])->name('delete.home.slider');
+// =====================================================================================================================================
+// =====================================================================================================================================
+
+// =====================================================================================================================================
+// =====================================================================================================================================
 
 
 //============== Manage home page contact detail ==============
-Route::post('/add/contact', [HomeSliderController::class,'add_contact_info'])->name('homepage.contact');
+Route::get('/add/contact', [ContactController::class,'add_contact_info'])->name('homepage.contact');
+//==================== Contact and address ====================== 
+Route::post('/store/contact', [ContactController::class,'add_Address'])->name('store.contact');
 
- 
+// ================== edit contact us ==================
+
+Route::get('/edit/contact/{id}', [ContactController::class,'edit_contactus'])->name('edit.home.contact');
+
+//================== update ==================
+Route::post('/update/contact/{id}', [ContactController::class,'update_contactus'])->name('update.contact');
+
+// =========================== Delete contact us data ===========================
+Route::get('/delete/contact/{id}', [ContactController::class,'delete_contactus'])->name('delete.home.contact');
+
+
+
 });
 });

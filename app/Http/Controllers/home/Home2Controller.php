@@ -5,10 +5,13 @@ namespace App\Http\Controllers\home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Newsletter;
+use App\Models\SocialLink;
+use Illuminate\Support\Facades\DB;
 class Home2Controller extends Controller
 {
     //
     public function homepage2_view(){
+ 
         return view('frontend2.index');
     }
 
@@ -28,7 +31,7 @@ class Home2Controller extends Controller
         return view('frontend2.detail.productdetail');
 
     }
-
+// Home page contact us 
     public function contact_us(){
         return view('frontend2.contact.contactus');
 

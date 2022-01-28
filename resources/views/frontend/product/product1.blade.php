@@ -1,5 +1,4 @@
-<p class="main_heading  pt-5">Top Selling Aquarium internal filters
-</p>
+
 <div class="row">
 <!-- ================== -->
 
